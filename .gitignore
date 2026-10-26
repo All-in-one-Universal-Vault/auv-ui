@@ -1,0 +1,14 @@
+# AUV 公开仓：只提交源码与发布物
+/target/
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+._*
+# 隐藏文件/目录默认全忽略
+.*
+!.gitignore
+!.gitattributes
+# 本地私有内容（正常不应出现在公开仓目录）
+/meta-docs/
+/.tmp/

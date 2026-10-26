@@ -1,0 +1,13 @@
+[package]
+name = "auv-i18n"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+description = "AUV 族国际化机制库（i18n mechanism library for the AUV family，Fluent 方案）"
+
+[dependencies]
+fluent = { workspace = true }
+fluent-syntax = { workspace = true }
+unic-langid = { workspace = true }
+sys-locale = { workspace = true }

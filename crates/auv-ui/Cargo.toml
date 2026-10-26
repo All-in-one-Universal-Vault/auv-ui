@@ -1,0 +1,25 @@
+[package]
+name = "auv-ui"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+description = "AUV 族 UI 骨架共享库（UI skeleton shared library for the AUV family）"
+
+[features]
+default = []
+gui = ["dep:eframe", "dep:egui"]
+tui = []
+
+[dependencies]
+eframe = { workspace = true, optional = true }
+egui = { workspace = true, optional = true }
+
+[dev-dependencies]
+ab_glyph = "0.2"  # 测试用：校验内置字体资产可解析、覆盖 CJK（与 egui 光栅化栈同源）
+eframe = { workspace = true }  # 探针示例用
+egui = { workspace = true }    # 探针示例用
+
+[[example]]
+name = "font_probe"
+required-features = ["gui"]
